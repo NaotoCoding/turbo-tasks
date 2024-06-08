@@ -40,8 +40,12 @@ Layout/IndentationConsistency:
 StringLiterals:
   EnforcedStyle: double_quotes
 
-# 配列の生成時にブラケットを使用することを強制する
+# 文字列の配列の生成時にブラケットを使用することを強制する
 Style/WordArray:
+  EnforcedStyle: brackets
+
+# ハッシュの配列の生成時にブラケットを使用することを強制する
+Style/SymbolArray:
   EnforcedStyle: brackets
 
 # クラス内の複数行にまたがる配列とハッシュを1行とみなす
