@@ -11,4 +11,3 @@
 #   policy.fullscreen  :self
 #   policy.payment     :self, "https://secure.example.com"
 # end
-

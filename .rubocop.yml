@@ -35,10 +35,6 @@ Style/RegexpLiteral:
 Layout/IndentationConsistency:
   EnforcedStyle: indented_internal_methods
 
-# ファイルの末尾に一行空行を設ける
-Layout/TrailingEmptyLines:
-  EnforcedStyle: final_blank_line
-
 # 文字列をダブルクオーテーションで記載することを強制する
 StringLiterals:
   EnforcedStyle: double_quotes

@@ -22,4 +22,3 @@ group :development do
   gem "rubocop-rspec", require: false
   gem "web-console"
 end
-
