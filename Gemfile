@@ -6,6 +6,7 @@ gem "bootsnap", require: false
 gem "cssbundling-rails"
 gem "exnum"
 gem "importmap-rails"
+gem "kaminari"
 gem "pg", "~> 1.1"
 gem "propshaft"
 gem "puma", ">= 5.0"
