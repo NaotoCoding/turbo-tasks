@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  before_action :set_tasks, only: [:index, :create]
+
   def index
     @task = Task.new
     @tasks = Task.all
@@ -6,7 +8,7 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
-    @task.have_not_done_yet!
+    @task.status = :have_not_done_yet
     if @task.save
       redirect_to tasks_path
     else
@@ -15,6 +17,10 @@ class TasksController < ApplicationController
   end
 
   private
+
+    def set_tasks
+      @tasks = Task.all
+    end
 
     def task_params
       params.require(:task).permit(:title)
