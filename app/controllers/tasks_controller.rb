@@ -3,7 +3,6 @@ class TasksController < ApplicationController
 
   def index
     @task = Task.new
-    @tasks = Task.all
   end
 
   def create
@@ -19,7 +18,12 @@ class TasksController < ApplicationController
   private
 
     def set_tasks
-      @tasks = Task.all
+      @q = Task.ransack(params[:q])
+      @tasks = if params[:q].present?
+                 @q.result
+               else
+                 Task.all
+               end
     end
 
     def task_params

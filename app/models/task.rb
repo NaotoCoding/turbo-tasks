@@ -12,4 +12,12 @@ class Task < ApplicationRecord
   validates :title, presence: true
   validates :status, presence: true
   exnum status: { have_not_done_yet: 10, completed: 20 }
+
+  def self.ransackable_attributes(_auth_object = nil)
+    ["title"]
+  end
+
+  def self.ransackable_associations(_auth_object = nil)
+    []
+  end
 end
