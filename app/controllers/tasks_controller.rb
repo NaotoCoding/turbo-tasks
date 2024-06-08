@@ -9,9 +9,11 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     @task.status = :have_not_done_yet
     if @task.save
-      redirect_to tasks_path
+      render :create_success
     else
-      render :index, status: :unprocessable_entity
+      render turbo_stream: [
+        turbo_stream.update("create-form", partial: "form", locals: { task: @task })
+      ], status: :unprocessable_entity
     end
   end
 

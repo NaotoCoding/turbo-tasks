@@ -1,3 +1,11 @@
-<%= render "search_form", q: @q %>
+<div id="search-form">
+  <%= render "search_form", q: @q %>
+</div>
+
+<%= turbo_frame_tag 'create-form' do %>
   <%= render "form", task: @task %>
-<%= render partial: "task", collection: @tasks %>
+<% end %>
+
+<div id="tasks">
+  <%= render partial: "task", collection: @tasks %>
+</div>

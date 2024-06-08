@@ -1,4 +1,4 @@
-<%= search_form_for q, url: tasks_url do |f| %>
+<%= search_form_for q, url: tasks_url, html: { data: { turbo_frame: "tasks" } } do |f| %>
   <%= f.search_field :title_cont %>
   <%= f.submit %>
 <% end %>

@@ -9,10 +9,15 @@ RSpec.describe "Tasks", type: :request do
   end
 
   describe "POST /tasks" do
-    subject { post tasks_path, params: }
+    subject { post tasks_path, as: :turbo_stream, params: }
 
     context "パラメータが正常な場合" do
       let(:params) { { task: { title: "タイトル" } } }
+
+      it "200を返す" do
+        subject
+        expect(response).to have_http_status 200
+      end
 
       it "タスクが作成される" do
         expect { subject }.to change(Task, :count).by(1)
@@ -21,11 +26,6 @@ RSpec.describe "Tasks", type: :request do
       it "タスクのステータスがhave_not_done_yetとして作成される" do
         subject
         expect(Task.last.have_not_done_yet?).to be true
-      end
-
-      it "タスク一覧画面にリダイレクトする" do
-        subject
-        expect(response).to redirect_to tasks_path
       end
     end
 
