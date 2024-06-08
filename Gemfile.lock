@@ -134,6 +134,11 @@ GEM
     nokogiri (1.16.5-x86_64-linux)
       racc (~> 1.4)
     pg (1.5.6)
+    propshaft (0.9.0)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
+      railties (>= 7.0.0)
     psych (5.1.2)
       stringio
     puma (6.4.2)
@@ -181,13 +186,6 @@ GEM
       psych (>= 4.0.0)
     reline (0.5.8)
       io-console (~> 0.5)
-    sprockets (4.2.1)
-      concurrent-ruby (~> 1.0)
-      rack (>= 2.2.4, < 4)
-    sprockets-rails (3.5.1)
-      actionpack (>= 6.1)
-      activesupport (>= 6.1)
-      sprockets (>= 3.0.0)
     stringio (3.1.0)
     thor (1.3.1)
     timeout (0.4.1)
@@ -216,9 +214,9 @@ DEPENDENCIES
   bootsnap
   debug
   pg (~> 1.1)
+  propshaft
   puma (>= 5.0)
   rails (~> 7.1.3, >= 7.1.3.4)
-  sprockets-rails
   tzinfo-data
   web-console
 
