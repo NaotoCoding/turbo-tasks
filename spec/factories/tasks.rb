@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :task do
-    title { "MyString" }
-    status { 1 }
+    title { "title" }
+    status { :have_not_done_yet }
   end
 end
