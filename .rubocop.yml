@@ -47,3 +47,7 @@ Style/WordArray:
 # クラス内の複数行にまたがる配列とハッシュを1行とみなす
 Metrics/ClassLength:
   CountAsOne: ["array", "hash"]
+
+# request_specのhttp_status確認時にstatusを数字で書くことを強制する
+RSpecRails/HttpStatus:
+  EnforcedStyle: numeric
