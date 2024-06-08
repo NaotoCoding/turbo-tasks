@@ -51,3 +51,11 @@ Metrics/ClassLength:
 # request_specのhttp_status確認時にstatusを数字で書くことを強制する
 RSpecRails/HttpStatus:
   EnforcedStyle: numeric
+
+# rspecのcontextでの文章を制限しない
+RSpec/ContextWording:
+  Enabled: false
+
+# rspecのsubjectを命名必須としない
+RSpec/NamedSubject:
+  Enabled: false
