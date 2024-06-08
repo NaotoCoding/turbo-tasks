@@ -6,3 +6,8 @@ ja:
       task:
         title: タイトル
         status: ステータス
+    enum:
+      task:
+        status:
+          have_not_done_yet: やってない
+          completed: 完了
