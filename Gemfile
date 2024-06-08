@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby "3.3.1"
 
 gem "bootsnap", require: false
+gem "cssbundling-rails"
 gem "importmap-rails"
 gem "pg", "~> 1.1"
 gem "propshaft"
