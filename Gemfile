@@ -3,6 +3,7 @@ source "https://rubygems.org"
 ruby "3.3.1"
 
 gem "bootsnap", require: false
+gem "bootstrap", "~> 5.3.3"
 gem "cssbundling-rails"
 gem "exnum"
 gem "importmap-rails"
