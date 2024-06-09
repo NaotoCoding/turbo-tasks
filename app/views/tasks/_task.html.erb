@@ -1,5 +1,8 @@
-<%= Task.human_attribute_name(:title) %>
-<%= task.title %>
-<%= Task.human_attribute_name(:status) %>
-<%= task.status_i18n %>
-<br>
+<%= turbo_frame_tag task do %>
+  <%= Task.human_attribute_name(:title) %>
+  <%= task.title %>
+  <%= Task.human_attribute_name(:status) %>
+  <%= task.status_i18n %>
+  <%= link_to t("common.button.destroy"), task_path(task), data: { turbo_method: :delete } %>
+  <br>
+<% end %>
