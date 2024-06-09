@@ -21,11 +21,12 @@ class TasksController < ApplicationController
 
     def set_tasks
       @q = Task.ransack(params[:q])
-      @tasks = if params[:q].present?
-                 @q.result
-               else
-                 Task.all
-               end
+      tasks = if params[:q].present?
+                @q.result
+              else
+                Task.all
+              end
+      @tasks = tasks.page(params[:page])
     end
 
     def task_params
