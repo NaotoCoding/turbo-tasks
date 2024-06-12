@@ -1,6 +1,6 @@
 <%= form_with model: task do |f| %>
   <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, placeholder: t(".input_title") %>
   <%= render "shared/form_error", f:, field: :title %>
   <%= f.submit %>
 <% end %>

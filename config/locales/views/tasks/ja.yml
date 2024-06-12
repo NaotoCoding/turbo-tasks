@@ -1,0 +1,6 @@
+ja:
+  tasks:
+    search_form:
+      search_by_title: タイトルで検索
+    form:
+      input_title: タイトルを入力
