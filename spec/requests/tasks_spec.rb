@@ -42,4 +42,19 @@ RSpec.describe "Tasks", type: :request do
       end
     end
   end
+
+  describe "DELETE /tasks/:id" do
+    subject { delete task_path(task), as: :turbo_stream }
+
+    let!(:task) { create(:task) }
+
+    it "タスクが削除される" do
+      expect { subject }.to change(Task, :count).by(-1)
+    end
+
+    it "200を返す" do
+      subject
+      expect(response).to have_http_status 200
+    end
+  end
 end
