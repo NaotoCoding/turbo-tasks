@@ -17,10 +17,12 @@ class TasksController < ApplicationController
     end
   end
 
-  # TODO: request spec記述
   def destroy
     @task = Task.find(params[:id])
     @task.destroy!
+    render turbo_stream: [
+      turbo_stream.remove(@task)
+    ]
   end
 
   private
