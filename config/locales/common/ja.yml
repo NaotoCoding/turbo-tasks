@@ -2,3 +2,4 @@ ja:
   common:
     button:
       destroy: 削除
+      register: 登録

@@ -1,7 +1,12 @@
-<!-- フォームなのでrequest formatはturbo_streamとなる -->
-<%= turbo_frame_tag 'create-form' do %>
-  <%= render "form", task: @task %>
-<% end %>
+<div class="card mb-3">
+  <h5 class="card-header"><%= t('.register') %></h5>
+  <div class="card-body">
+    <!-- フォームなのでrequest formatはturbo_streamとなる -->
+    <%= turbo_frame_tag 'create-form' do %>
+      <%= render "form", task: @task %>
+    <% end %>
+  </div>
+</div>
 
 <div class="card">
   <h5 class="card-header"><%= t('.search') %></h5>

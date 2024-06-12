@@ -1,6 +1,8 @@
 <%= form_with model: task do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title, placeholder: t(".input_title") %>
-  <%= render "shared/form_error", f:, field: :title %>
-  <%= f.submit %>
+  <div class="mb-3">
+    <%= f.label :title, class: "form-label" %>
+    <%= f.text_field :title, placeholder: t(".input_title"), class: "form-control" %>
+    <%= render "shared/form_error", f:, field: :title %>
+  </div>
+  <%= f.submit t("common.button.register"), class: "btn btn-primary" %>
 <% end %>
