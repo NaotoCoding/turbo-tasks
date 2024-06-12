@@ -3,3 +3,5 @@ ja:
     button:
       destroy: 削除
       register: 登録
+    word:
+      application_name: タスク管理アプリ
