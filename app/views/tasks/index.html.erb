@@ -8,7 +8,7 @@
   </div>
 </div>
 
-<div class="card">
+<div class="card mb-3">
   <h5 class="card-header"><%= t('.search') %></h5>
   <div class="card-body">
     <div id="search-form">
@@ -18,8 +18,13 @@
   </div>
 </div>
 
-<!--kaminariがransackの検索パラメータも同時に送信してくれる -->
-<!-- フォームでないので、request formatはturbo_streamではないが、"tasks"内を置き換えるのが目的なのでOK -->
-<%= turbo_frame_tag "tasks" do %>
-  <%= render "tasks", tasks: @tasks %>
-<% end %>
+<div class="card mb-3">
+  <h5 class="card-header"><%= t('.tasks') %></h5>
+  <div class="card-body">
+    <!--kaminariがransackの検索パラメータも同時に送信してくれる -->
+    <!-- フォームでないので、request formatはturbo_streamではないが、"tasks"内を置き換えるのが目的なのでOK -->
+    <%= turbo_frame_tag "tasks" do %>
+      <%= render "tasks", tasks: @tasks %>
+    <% end %>
+  </div>
+</div>

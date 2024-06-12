@@ -1,8 +1,11 @@
 <%= turbo_frame_tag task do %>
-  <%= Task.human_attribute_name(:title) %>
-  <%= task.title %>
-  <%= Task.human_attribute_name(:status) %>
-  <%= task.status_i18n %>
-  <%= link_to t("common.button.destroy"), task_path(task), data: { turbo_method: :delete } %>
-  <br>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div>
+        <%= task.title %>
+      </div>
+      <%= task.status_i18n %>
+    </div>
+    <%= link_to t("common.button.destroy"), task_path(task), data: { turbo_method: :delete }, class: "btn btn-danger" %>
+  </li>
 <% end %>
