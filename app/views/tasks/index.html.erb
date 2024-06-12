@@ -1,6 +1,11 @@
-<div id="search-form">
-  <!-- POSTのフォームではないので、明示的にrequest formatをturbo_streamにする必要がある(パーシャル参照) -->
-  <%= render "search_form", q: @q %>
+<div class="card">
+  <h5 class="card-header"><%= t('.search') %></h5>
+  <div class="card-body">
+    <div id="search-form">
+      <!-- POSTのフォームではないので、明示的にrequest formatをturbo_streamにする必要がある(パーシャル参照) -->
+      <%= render "search_form", q: @q %>
+    </div>
+  </div>
 </div>
 
 <!-- フォームなのでrequest formatはturbo_streamとなる -->

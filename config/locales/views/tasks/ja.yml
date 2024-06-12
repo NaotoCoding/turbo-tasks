@@ -4,3 +4,5 @@ ja:
       search_by_title: タイトルで検索
     form:
       input_title: タイトルを入力
+    index:
+      search: 検索
